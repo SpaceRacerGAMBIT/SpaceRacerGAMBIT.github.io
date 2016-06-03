@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студента GeekBrains</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" >
+
+	<script type="text/javascript">
+
+		function randomInteger(min, max){
+			var rand = min - 0.5 + Math.random() * (max + 1 - min);
+			rand = Math.round(rand);
+			return rand;
+		}
+		
+		randomAnswer = randomInteger(1,100);
+		
+
+		function StartPlay(){
+					
+		user1 = prompt('Введите имя игрока 1');
+		user2 = prompt('Введите имя игрока 2');
+		
+		while(true)
+		{
+			var user1Answer = prompt('Ход игрока ' + user1 + '.\n\nВведите число от 1 до 100');
+				if(user1Answer == randomAnswer)	{
+					alert('Вы угадали');
+					break;
+				} 
+				if (user1Answer < 1 || user1Answer > 100) {
+					do {
+						user1Answer = prompt('Некоректный ввод, введите число от 1 до 100');
+					}
+					while(user1Answer < 1 || user1Answer > 100)
+				}
+				if (user1Answer < randomAnswer) {
+					alert('Ваше число меньше загаданного');
+				} 
+				if (user1Answer > randomAnswer) {
+					alert('Ваше число больше загаданного');
+				}
+
+			var user2Answer = prompt('Ход игрока ' + user2 + '.\n\nВведите число от 1 до 100');
+				if(user2Answer == randomAnswer){
+					alert('Вы угадали');
+					break;
+				} 
+				if (user2Answer < 1 || user2Answer > 100) {
+					do {
+						user1Answer = prompt('Некоректный ввод, введите число от 1 до 100');
+					}
+					while(user1Answer < 1 || user1Answer > 100)
+				}
+				if (user2Answer < randomAnswer) {
+					alert('Ваше число меньше загаданного');
+				} 
+				if (user2Answer > randomAnswer) {
+					alert('Ваше число больше загаданного');
+				}
+			}
+
+		if(user1Answer == randomAnswer){
+			alert('Победил игрок ' + user1);	
+		}
+		if(user2Answer == randomAnswer){
+			alert('Победил игрок ' + user2);
+		}
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle.html">Загадки</a></li>
+			<li><a href="guess.html">Угадайка</a></li>
+			<li><a href="guess2.html">Угадайка на двоих</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="content_box">
+
+	<div id="content_title">
+	<h2>Игра угадайка</h2>
+	</div>
+
+	<div id="content">
+		<p>Компьютер загадывает число от 1 до 100, игроки вводят свои имена и по очереди пытаются отгдадать это число. После каждого введенного числа компьтер дает подсказку больше ли ваше число загаданого или меньше. Затем ход переходит к другому игроку.
+		<br/><br/>Побеждает игрок первый угадавший число.</p>
+
+		<input type="button" value="Начать игру" onclick="StartPlay()" />
+	</div>
+
+
+
+	<div id="tooplate_footer">
+		by GAMBIT &copy; 2016
+	</div>
+
+
+</div>
+
+</body>
+</html>

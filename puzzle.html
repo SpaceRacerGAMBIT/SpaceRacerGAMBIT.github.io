@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Загадки</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" >
+<script type="text/javascript">
+/*
+function checkAnswers(){
+	var userAnswer = document.getElementById('answer1').value;
+	alert(userAnswer);
+}
+*/
+
+	function checkAnswers(tagName, answer){
+
+		var userAnswer = document.getElementById(tagName).value;
+		if(userAnswer.toLowerCase() == answer){
+			return true;
+		}
+		else {
+			return false;
+		}
+
+	}
+
+	function checkAnswersButton(){
+
+		var CorrectAnswersCount=0;
+		if(checkAnswers('answer1','9')){
+			CorrectAnswersCount++
+		}
+		if(checkAnswers('answer2','ролики')){
+			CorrectAnswersCount++
+		}
+		if(checkAnswers('answer3','шайба')){
+			CorrectAnswersCount++
+		}
+		if(checkAnswers('answer4',"гитарой")){
+			CorrectAnswersCount++
+		}
+		if(CorrectAnswersCount == 0){
+			alert('Вы ничего не угадали');
+		}
+		else {
+			alert('Количество правильных ответов: ' + CorrectAnswersCount);
+		}
+	}
+
+</script>
+</head>
+
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle.html">Загадки</a></li>
+			<li><a href="guess.html">Угадайка</a></li>
+			<li><a href="guess2.html">Угадайка на двоих</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="content_box">
+	
+	<div id="content_title">
+		<h2>Игра Загадки</h2>
+	</div>
+
+	<div id="content">
+		<table width="100%" cellspacing="10">	
+			<tr valign="middle">
+				<td>
+					<p>Цифра шесть перевернулась,<br/>новой цифрой обернулась!</p>
+					<input type="text" id="answer1"></input>
+				</td>
+			
+				<td>
+					<p>Есть у нас коньки одни,<br/>Только летние они.<br/>По асфальту мы катались<br/>И довольными остались.</p>
+					<input type="text" id="answer2"></input>
+				</td>
+			</tr>
+
+			<tr valign="middle">
+				<td>
+					<p>Гоняют клюшками по льду<br/>Её у нас всех на виду.<br/>Она в ворота залетит,<br/>И кто-то точно победит.</p>
+					<input type="text" id="answer3"></input>
+				</td>
+
+				<td>
+					<p>Звенит струна, поет она,<br/>И песня всем ее слышна.<br/>Шесть струн играют что угодно,<br/>А инструмент тот вечно модный.<br/>Он никогда не станет старым.<br/>Тот инструмент зовем...</p>
+					<input type="text" id="answer4"></input>
+				</td>
+
+			</tr>
+
+			<tr>
+				<td align="center" colspan="2">
+					<input type="button" value="Ответить" onclick="checkAnswersButton()" />
+				</td>
+			</tr>
+		</table>
+
+
+	</div>
+	<div id="tooplate_footer">
+		by GAMBIT &copy; 2016
+	</div>
+
+
+</div>
+
+</body>
+</html>
