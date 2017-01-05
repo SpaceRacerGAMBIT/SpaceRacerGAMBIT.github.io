@@ -5,17 +5,16 @@
 	<title>Загадки</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" >
 <script type="text/javascript">
-/*
-function checkAnswers(){
-	var userAnswer = document.getElementById('answer1').value;
-	alert(userAnswer);
-}
-*/
 
+	var ans1 = ['9']
+	var ans2 = ['ролики']
+	var ans3 = ['шайба']
+	var ans4 = ['гитарой','гитара']
+	
 	function checkAnswers(tagName, answer){
 
 		var userAnswer = document.getElementById(tagName).value;
-		if(userAnswer.toLowerCase() == answer){
+		if(answer.indexOf(userAnswer.toLowerCase()) != -1) {
 			return true;
 		}
 		else {
@@ -27,16 +26,16 @@ function checkAnswers(){
 	function checkAnswersButton(){
 
 		var CorrectAnswersCount=0;
-		if(checkAnswers('answer1','9')){
+		if(checkAnswers('answer1',ans1)){
 			CorrectAnswersCount++
 		}
-		if(checkAnswers('answer2','ролики')){
+		if(checkAnswers('answer2',ans2)){
 			CorrectAnswersCount++
 		}
-		if(checkAnswers('answer3','шайба')){
+		if(checkAnswers('answer3',ans3)){
 			CorrectAnswersCount++
 		}
-		if(checkAnswers('answer4',"гитарой")){
+		if(checkAnswers('answer4',ans4)){
 			CorrectAnswersCount++
 		}
 		if(CorrectAnswersCount == 0){
