@@ -25,25 +25,41 @@
 
 	function checkAnswersButton(){
 
-		var CorrectAnswersCount=0;
+		//var CorrectAnswersCount=0;
 		if(checkAnswers('answer1',ans1)){
-			CorrectAnswersCount++
+			//CorrectAnswersCount++
+			document.getElementById('answer1').style.backgroundColor = "palegreen"
+		}
+		else {
+			document.getElementById('answer1').style.backgroundColor = "lightcoral"
 		}
 		if(checkAnswers('answer2',ans2)){
-			CorrectAnswersCount++
+			//CorrectAnswersCount++
+			document.getElementById('answer2').style.backgroundColor = "palegreen"
+		}
+		else {
+			document.getElementById('answer2').style.backgroundColor = "lightcoral"
 		}
 		if(checkAnswers('answer3',ans3)){
-			CorrectAnswersCount++
+			//CorrectAnswersCount++
+			document.getElementById('answer3').style.backgroundColor = "palegreen"
+		}
+		else {
+			document.getElementById('answer3').style.backgroundColor = "lightcoral"
 		}
 		if(checkAnswers('answer4',ans4)){
-			CorrectAnswersCount++
+			//CorrectAnswersCount++
+			document.getElementById('answer4').style.backgroundColor = "palegreen"
 		}
-		if(CorrectAnswersCount == 0){
+		else {
+			document.getElementById('answer4').style.backgroundColor = "lightcoral"
+		}
+		/*if(CorrectAnswersCount == 0){
 			alert('Вы ничего не угадали');
 		}
 		else {
 			alert('Количество правильных ответов: ' + CorrectAnswersCount);
-		}
+		}*/
 	}
 
 </script>
