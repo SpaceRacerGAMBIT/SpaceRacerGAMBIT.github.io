@@ -44,11 +44,14 @@
 					alert('Ваше число больше загаданного');
 				}
 
-			var user2Answer = prompt('Ход игрока ' + user2 + '.\n\nВведите число от 1 до 100');
+			var user2Answer = prompt('Ход игрока ' + user2 + '.\n\nВведите число от 1 до 100\n\nВведите q для выхода из игры');
 				if(user2Answer == randomAnswer){
 					alert('Вы угадали');
 					break;
-				} 
+				}
+				if(user1Answer == 'q') {
+					break;
+				}
 				if (user2Answer < 1 || user2Answer > 100) {
 					do {
 						user1Answer = prompt('Некоректный ввод, введите число от 1 до 100');
